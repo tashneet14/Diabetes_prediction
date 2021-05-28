@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Prediction Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Diabetes Prediction</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="pre" id="pre" placeholder="Pregnancies">
+            <input type="number" name="glu" id="glu" placeholder="Glucose" step="any">
+            <input type="number" name="bp" id="bp" placeholder="Blood Pressure" step="any">
+            <input type="number" name="st" id="st" placeholder="Skin Thickness" step="any">
+            <input type="number" name="ins" id="ins" placeholder="Insulin" step="any">
+            <input type="number" name="bmi" id="bmi" placeholder="BMI" step="any">
+            <input type="number" name="dpf" id="dpf" placeholder="Diabetes Pedigree Function" step="any">
+            <input type="number" name="age" id="age" placeholder="Age">
+</select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
